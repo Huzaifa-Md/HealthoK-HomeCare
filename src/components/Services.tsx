@@ -89,101 +89,52 @@ const labTests = [
 
 const nursingProcedures = [
   {
-    title: 'IM Injection',
-    description:
-      'Intramuscular injection administration by certified nurses ensuring proper technique, sterile handling, and patient comfort at home.',
+    title: 'IM Injection Services at Home',
+    description: 'Safe intramuscular injections administered by trained healthcare professionals in the comfort of your home.',
     icon: Syringe,
   },
   {
-    title: 'IV Injection',
-    description:
-      'Intravenous medication delivery with precision and safety, performed by experienced healthcare professionals at your residence.',
+    title: 'IV Injection at Home',
+    description: 'Professional intravenous medication administration with proper monitoring and clinical safety.',
     icon: Syringe,
   },
   {
-    title: 'Cannulation',
-    description:
-      'Expert peripheral venous cannula insertion for patients requiring ongoing intravenous access in a comfortable home setting.',
+    title: 'Cannula Insertion at Home',
+    description: 'Expert cannula placement for IV medications, fluids, and prescribed treatments.',
     icon: Syringe,
   },
   {
-    title: 'IV Drip Administration',
-    description:
-      'Supervised intravenous fluid and medication infusion with continuous monitoring to ensure safe and effective treatment delivery.',
-    icon: Droplets,
-  },
-  {
-    title: 'Wound Dressing',
-    description:
-      'Sterile wound cleaning and dressing changes using medical-grade supplies to promote healing and prevent infection at home.',
-    icon: Bandage,
-  },
-  {
-    title: 'Post Surgery Dressing',
-    description:
-      'Specialized postoperative wound care following surgical procedures, ensuring hygienic dressing changes and recovery monitoring.',
-    icon: Scissors,
-  },
-  {
-    title: 'Enema Procedure',
-    description:
-      'Medically guided enema administration performed with care and discretion by trained nursing professionals in the privacy of your home.',
-    icon: Activity,
-  },
-  {
-    title: 'Colostomy/Ostomy Care',
-    description:
-      'Comprehensive ostomy bag management including cleaning, pouch replacement, and skin care by experienced healthcare providers.',
+    title: 'Stoma Bag Change and Care',
+    description: 'Professional stoma care services focused on hygiene, comfort, and complication prevention.',
     icon: Package,
   },
   {
-    title: 'Nebulization',
-    description:
-      'Respiratory therapy through nebulizer sessions to deliver medication directly to the lungs for conditions like asthma and bronchitis.',
-    icon: Wind,
-  },
-  {
-    title: 'BP Monitoring',
-    description:
-      'Accurate blood pressure measurement and recording using calibrated equipment, with guidance on managing hypertension or hypotension.',
-    icon: HeartPulse,
-  },
-  {
-    title: 'Sugar Monitoring',
-    description:
-      'Regular blood glucose level checks using reliable glucometers, helping patients maintain optimal diabetes control at home.',
+    title: 'Catheter Change at Home',
+    description: 'Safe catheter insertion, replacement, and maintenance performed by trained professionals.',
     icon: Activity,
+  },
+  {
+    title: 'IV Drip at Home',
+    description: 'Administration of prescribed IV fluids and drips with proper observation and care.',
+    icon: Droplets,
+  },
+  {
+    title: 'Dressing at Home',
+    description: 'Wound dressing and post-treatment care for injuries, surgical wounds, and chronic conditions.',
+    icon: Bandage,
   },
 ];
 
 // ============================
-// Injection & Vaccination Items
+// Vaccination Items
 // ============================
 
-const injectionVaccination = [
+const vaccinationServices = [
   {
-    title: 'IM Injection',
+    title: 'Pediatrics Vaccination',
     description:
-      'Safe and precise intramuscular injection service for prescribed medications, administered by qualified nursing staff at your doorstep.',
-    icon: Syringe,
-  },
-  {
-    title: 'IV Injection',
-    description:
-      'Professional intravenous injection delivery ensuring accurate dosage and sterile technique by certified healthcare practitioners.',
-    icon: Syringe,
-  },
-  {
-    title: 'Insulin Injection',
-    description:
-      'Assisted insulin administration for diabetic patients who need help with correct dosage, injection sites, and timing management.',
-    icon: Pill,
-  },
-  {
-    title: 'Vitamin Injections',
-    description:
-      'Intramuscular vitamin supplementation including B12, D, and other essential nutrients to address deficiencies and boost vitality.',
-    icon: ShieldPlus,
+      'Safe and timely immunizations for children administered by experienced pediatric nurses in the comfort of your home.',
+    icon: Baby,
   },
   {
     title: 'Adult Vaccination',
@@ -195,7 +146,7 @@ const injectionVaccination = [
     title: 'Elderly Vaccination',
     description:
       'Specialized vaccination care for senior citizens, ensuring comfort and safety for age-appropriate immunizations at home.',
-    icon: Baby,
+    icon: ShieldPlus,
   },
 ];
 
@@ -291,7 +242,7 @@ export default function Services({ onBookService }: ServicesProps) {
             Our Services
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-text-primary mb-6">
-            Professional Healthcare{' '}
+            Professional Expert{' '}
             <span className="gradient-text">At Home</span>
           </h2>
           <p className="text-text-secondary text-base lg:text-lg">
@@ -301,39 +252,6 @@ export default function Services({ onBookService }: ServicesProps) {
         </div>
 
 
-
-        {/* ======================== */}
-        {/* Lab Tests Section */}
-        {/* ======================== */}
-        <div id="lab-tests" className="mb-12 lg:mb-20">
-          <div className="mb-6 lg:mb-10">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-text-primary mb-3">
-              Lab Tests <span className="gradient-text">at Home</span>
-            </h2>
-            <p className="text-text-secondary text-base lg:text-lg max-w-2xl">
-              Professional sample collection and diagnostic testing from the
-              comfort of your home.
-            </p>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-3 sm:gap-4 lg:gap-6">
-            {labTests.map((item, i) => (
-              <ServiceCard
-                key={item.title}
-                title={item.title}
-                description={item.description}
-                icon={item.icon}
-                buttonLabel="Book Test"
-                onBook={() => onBookService(item.title)}
-                onClickCard={() => {
-                  if (window.innerWidth < 1024) {
-                    setSelectedService(item);
-                  }
-                }}
-                index={i}
-              />
-            ))}
-          </div>
-        </div>
 
         {/* ======================== */}
         {/* Nursing Procedures Section */}
@@ -370,27 +288,60 @@ export default function Services({ onBookService }: ServicesProps) {
         </div>
 
         {/* ======================== */}
-        {/* Injection & Vaccination Section */}
+        {/* Vaccination Section */}
         {/* ======================== */}
-        <div id="injection-vaccination">
+        <div id="vaccination" className="mb-12 lg:mb-20">
           <div className="mb-6 lg:mb-10">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-text-primary mb-3">
-              Injection & Vaccination{' '}
+              Vaccination{' '}
               <span className="gradient-text">at Home</span>
             </h2>
             <p className="text-text-secondary text-base lg:text-lg max-w-2xl">
-              Safe administration of prescribed injections and vaccinations at
+              Safe administration of prescribed vaccinations at
               your home by trained healthcare professionals.
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-3 sm:gap-4 lg:gap-6">
-            {injectionVaccination.map((item, i) => (
+            {vaccinationServices.map((item, i) => (
               <ServiceCard
-                key={item.title + '-injection'}
+                key={item.title + '-vaccination'}
                 title={item.title}
                 description={item.description}
                 icon={item.icon}
                 buttonLabel="Book Service"
+                onBook={() => onBookService(item.title)}
+                onClickCard={() => {
+                  if (window.innerWidth < 1024) {
+                    setSelectedService(item);
+                  }
+                }}
+                index={i}
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* ======================== */}
+        {/* Lab Tests Section */}
+        {/* ======================== */}
+        <div id="lab-tests">
+          <div className="mb-6 lg:mb-10">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-text-primary mb-3">
+              Lab Tests <span className="gradient-text">at Home</span>
+            </h2>
+            <p className="text-text-secondary text-base lg:text-lg max-w-2xl">
+              Professional sample collection and diagnostic testing from the
+              comfort of your home.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-3 sm:gap-4 lg:gap-6">
+            {labTests.map((item, i) => (
+              <ServiceCard
+                key={item.title}
+                title={item.title}
+                description={item.description}
+                icon={item.icon}
+                buttonLabel="Book Test"
                 onBook={() => onBookService(item.title)}
                 onClickCard={() => {
                   if (window.innerWidth < 1024) {

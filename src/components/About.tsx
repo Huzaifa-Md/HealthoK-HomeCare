@@ -70,7 +70,7 @@ export default function About() {
                 <h3 className="text-xl font-bold text-text-primary">Our Mission</h3>
               </div>
               <p className="text-text-secondary leading-relaxed">
-                To make professional healthcare services accessible to every
+                To make Professional Expert At Home services accessible to every
                 household by providing affordable, reliable, and compassionate
                 home care services through certified medical professionals.
               </p>

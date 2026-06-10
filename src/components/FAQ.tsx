@@ -9,16 +9,8 @@ const faqs = [
     a: 'Yes, absolutely. All our healthcare professionals—including nurses, attendants, and physiotherapists—are fully certified, licensed, and have undergone rigorous background checks. We also provide continuous training to ensure high-quality care.',
   },
   {
-    q: 'How quickly can a caregiver arrive?',
-    a: 'For regular pre-scheduled bookings, caregivers arrive at the agreed time. For urgent requests, we can usually arrange for a healthcare professional to reach your home within 2-4 hours, depending on your location and availability.',
-  },
-  {
-    q: 'Do you provide emergency services or ambulance support?',
-    a: 'We offer urgent home care services but we are NOT a substitute for emergency room care. If the patient is experiencing a life-threatening emergency, please call your local ambulance service or go to the nearest hospital immediately.',
-  },
-  {
-    q: 'Are medicines included in the service price?',
-    a: 'No, our service prices cover only the professional caregiver\'s visit and administration of care. Medicines, consumables (like bandages, syringes), and medical equipment must be provided by the family or can be arranged separately.',
+    q: 'Do you provide emergency or urgent care services?',
+    a: 'No, we do NOT provide emergency or urgent care services. We offer scheduled home healthcare services only. In case of a medical emergency, please call an ambulance or visit the nearest hospital immediately.',
   },
   {
     q: 'What areas do you currently serve?',
@@ -27,14 +19,6 @@ const faqs = [
   {
     q: 'How do I book a service and what are the payment methods?',
     a: 'You can book by calling us directly at 9870270197 or messaging us on WhatsApp. We accept online payments (UPI, Netbanking, Credit/Debit cards) as well as cash. Payments can be made on a daily, weekly, or monthly basis depending on the service duration.',
-  },
-  {
-    q: 'Can I request a change if I am not comfortable with the assigned caregiver?',
-    a: 'Yes. We understand that compatibility is important. If you or the patient are not comfortable with the assigned caregiver, please contact us and we will arrange a replacement at the earliest possible time.',
-  },
-  {
-    q: 'What safety measures and hygiene protocols do you follow?',
-    a: 'We follow strict safety protocols. Our caregivers are trained in infection control, use sterile equipment, ensure proper waste disposal, sanitize before and after procedures, and wear appropriate PPE (masks, gloves) during patient care.',
   },
 ];
 

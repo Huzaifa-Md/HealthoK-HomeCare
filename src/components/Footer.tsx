@@ -38,7 +38,7 @@ export default function Footer({ onRequestCallback }: FooterProps) {
               </span>
             </Link>
             <p className="text-white/50 text-sm leading-relaxed mb-4">
-              Professional healthcare services at your doorstep. Certified professionals, fast home visits.
+              <span className="text-primary font-semibold">Professional Expert At Home</span> services at your doorstep. Certified professionals, fast home visits.
             </p>
           </div>
 

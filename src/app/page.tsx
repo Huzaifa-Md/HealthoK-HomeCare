@@ -13,6 +13,7 @@ import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import CallbackModal from '@/components/CallbackModal';
 import FloatingCallback from '@/components/FloatingCallback';
+import FloatingWhatsApp from '@/components/FloatingWhatsApp';
 
 export default function Home() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -28,13 +29,14 @@ export default function Home() {
       <Navbar onRequestCallback={() => openModal()} />
       <Hero onRequestCallback={() => openModal()} />
       <ServiceNavigation />
-      <About />
       <Services onBookService={(service) => openModal(service)} />
       <Areas onBookService={(service) => openModal(service)} />
       <Testimonials />
       <FAQ />
+      <About />
       <Contact onRequestCallback={() => openModal()} />
       <Footer onRequestCallback={() => openModal()} />
+      <FloatingWhatsApp />
       <FloatingCallback onClick={() => openModal()} />
       <CallbackModal
         isOpen={modalOpen}

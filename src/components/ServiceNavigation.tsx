@@ -4,13 +4,6 @@ import { TestTube, Bandage, Syringe } from 'lucide-react';
 
 const serviceCategories = [
   {
-    id: 'lab-tests',
-    title: 'Lab Tests',
-    icon: TestTube,
-    description: 'Home sample collection & diagnostics',
-    color: 'from-blue-500 to-cyan-500',
-  },
-  {
     id: 'nursing-procedures',
     title: 'Nursing Procedures',
     icon: Bandage,
@@ -18,11 +11,18 @@ const serviceCategories = [
     color: 'from-emerald-500 to-teal-500',
   },
   {
-    id: 'injection-vaccination',
-    title: 'Injection & Vaccination',
+    id: 'vaccination',
+    title: 'Vaccination',
     icon: Syringe,
-    description: 'Safe injections & vaccinations at home',
+    description: 'Safe vaccinations at home',
     color: 'from-violet-500 to-purple-500',
+  },
+  {
+    id: 'lab-tests',
+    title: 'Lab Tests',
+    icon: TestTube,
+    description: 'Home sample collection & diagnostics',
+    color: 'from-blue-500 to-cyan-500',
   },
 ];
 
