@@ -9,16 +9,16 @@ interface ContactProps {
 export default function Contact({ onRequestCallback }: ContactProps) {
   return (
     <section id="contact" className="section-padding bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
-      <div className="max-w-6xl mx-auto relative z-10">
-        <div className="text-center max-w-2xl mx-auto mb-16">
+      <div className="content-container max-w-6xl mx-auto relative z-10">
+        <div className="text-center max-w-2xl mx-auto mb-12">
           <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-4">
             <Headphones className="w-4 h-4" />We're Here to Help
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-text-primary mb-6">
             Get in <span className="gradient-text">Touch</span>
           </h2>
-          <p className="text-text-secondary text-lg">
-            Our medical professionals are ready to provide the best home healthcare services. Request a callback and we will contact you immediately.
+          <p className="text-text-secondary text-lg font-medium">
+            Our medical professionals are ready to provide the best home healthcare services. Request a callback to schedule your service.
           </p>
         </div>
 
@@ -27,10 +27,10 @@ export default function Contact({ onRequestCallback }: ContactProps) {
           <div className="space-y-8">
             <div className="bg-white p-8 rounded-3xl border border-border shadow-xl shadow-primary/5">
               <h3 className="text-2xl font-bold text-text-primary mb-4">
-                Need immediate assistance?
+                Need Help Choosing a Service?
               </h3>
               <p className="text-text-secondary mb-8 leading-relaxed">
-                Skip the waiting times. Leave your details and our care coordinator will call you back within minutes to arrange your service.
+                Our team is available to help you select the right home healthcare service and answer your questions.
               </p>
               
               <button

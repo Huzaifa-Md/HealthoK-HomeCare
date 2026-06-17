@@ -29,9 +29,9 @@ export default function FAQ() {
     <section id="faq" className="section-padding bg-white relative overflow-hidden">
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl translate-y-1/2 translate-x-1/2" />
 
-      <div className="max-w-3xl mx-auto relative z-10">
+      <div className="content-container max-w-3xl mx-auto relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-4">
             <HelpCircle className="w-4 h-4" />
             FAQ
@@ -40,7 +40,7 @@ export default function FAQ() {
             Frequently Asked{' '}
             <span className="gradient-text">Questions</span>
           </h2>
-          <p className="text-text-secondary text-lg">
+          <p className="text-text-secondary text-lg font-medium">
             Find quick answers to common questions about our services.
           </p>
         </div>

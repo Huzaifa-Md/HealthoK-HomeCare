@@ -47,9 +47,9 @@ export default function Areas({ onBookService }: AreasProps) {
       />
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-primary/3 rounded-full blur-3xl" />
 
-      <div className="max-w-7xl mx-auto relative z-10">
+      <div className="content-container relative z-10">
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
+        <div className="text-center max-w-2xl mx-auto mb-12">
           <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-4">
             <MapPin className="w-4 h-4" />
             Service Areas
@@ -64,11 +64,11 @@ export default function Areas({ onBookService }: AreasProps) {
         </div>
 
         {/* Areas Cards */}
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
           {areas.map((area, i) => (
             <div
               key={i}
-              className="group relative p-4 lg:p-8 rounded-2xl bg-white border border-border hover:border-transparent hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 card-hover overflow-hidden cursor-pointer lg:cursor-default"
+              className="group relative h-full flex flex-col p-4 lg:p-8 rounded-2xl bg-white border border-border hover:border-transparent hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 card-hover overflow-hidden cursor-pointer lg:cursor-default"
               onClick={() => {
                 if (window.innerWidth < 1024) {
                   setSelectedArea({
@@ -90,10 +90,10 @@ export default function Areas({ onBookService }: AreasProps) {
                     <Navigation className="w-6 h-6 lg:w-8 lg:h-8 text-primary group-hover:text-white transition-colors" />
                   </div>
 
-                  <h3 className="text-base sm:text-lg lg:text-xl font-bold text-text-primary group-hover:text-white mb-0 lg:mb-3 transition-colors leading-tight lg:leading-normal">
+                  <h3 className="text-lg lg:text-xl font-bold text-text-primary group-hover:text-white mb-2 transition-colors leading-tight lg:leading-normal">
                     {area.name}
                   </h3>
-                  <p className="hidden lg:block text-text-secondary group-hover:text-white/80 leading-relaxed transition-colors">
+                  <p className="hidden lg:block text-text-secondary group-hover:text-white/80 leading-relaxed transition-colors flex-1 w-full">
                     {area.desc}
                   </p>
                 </div>
@@ -107,7 +107,7 @@ export default function Areas({ onBookService }: AreasProps) {
                       e.preventDefault();
                     }
                   }}
-                  className="hidden lg:inline-flex mt-6 items-center gap-2 text-primary group-hover:text-white/90 text-sm font-semibold transition-colors w-fit"
+                  className="hidden lg:inline-flex mt-auto pt-6 items-center gap-2 text-primary group-hover:text-white/90 text-sm font-semibold transition-colors w-fit"
                 >
                   <MapPin className="w-4 h-4" />
                   View on map

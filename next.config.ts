@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  // Security headers are temporarily removed to prevent IDE preview blocking
 };
 
 export default nextConfig;

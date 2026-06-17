@@ -62,6 +62,10 @@ export default function CallbackModal({
       toast.error('Please enter a valid 10-digit mobile number.');
       return;
     }
+    if (!form.notes.trim()) {
+      toast.error('Please describe the required service.');
+      return;
+    }
 
     setSubmitting(true);
 
@@ -220,9 +224,10 @@ export default function CallbackModal({
           <div>
             <label className="flex items-center gap-1.5 text-sm font-medium text-text-primary mb-1.5">
               <FileText className="w-4 h-4 text-primary" />
-              Notes / Requirements
+              Notes / Requirements <span className="text-danger">*</span>
             </label>
             <textarea
+              required
               value={form.notes}
               onChange={(e) =>
                 setForm({ ...form, notes: e.target.value })

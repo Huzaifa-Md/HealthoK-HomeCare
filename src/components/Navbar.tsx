@@ -3,7 +3,6 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import logoImg from '../../public/logo-1.png';
 import {
   Menu,
   X,
@@ -12,11 +11,11 @@ import {
 
 const navLinks = [
   { label: 'Home', href: '#home' },
-  { label: 'About', href: '#about' },
   { label: 'Services', href: '#services' },
   { label: 'Areas', href: '#areas' },
   { label: 'Testimonials', href: '#testimonials' },
   { label: 'FAQ', href: '#faq' },
+  { label: 'About', href: '#about' },
   { label: 'Contact', href: '#contact' },
 ];
 
@@ -67,7 +66,7 @@ export default function Navbar({ onRequestCallback }: NavbarProps) {
           : 'shadow-sm'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="content-container">
         <div className="flex items-center justify-between h-14 lg:h-20">
           {/* Logo */}
           <Link
@@ -76,13 +75,15 @@ export default function Navbar({ onRequestCallback }: NavbarProps) {
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           >
             <Image
-              src={logoImg}
-              alt="HealthoK Logo"
-              className="w-10 h-10 md:w-12 md:h-12 lg:w-10 lg:h-10 object-contain group-hover:scale-110 transition-transform"
+              src="/logo.jpg"
+              alt="PrickCare Logo"
+              width={60}
+              height={60}
+              className="w-[40px] h-[40px] md:w-[48px] md:h-[48px] lg:w-[56px] lg:h-[56px] object-contain group-hover:scale-110 transition-transform shrink-0"
               priority
             />
             <span className="text-sm sm:text-base lg:text-lg font-bold text-text-primary leading-tight tracking-tight whitespace-nowrap">
-              HealthoK<span className="text-primary">@</span>HomeCare
+              PrickCare<span className="text-primary">@</span>HomeCare
             </span>
           </Link>
 

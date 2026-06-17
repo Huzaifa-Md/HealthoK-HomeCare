@@ -38,7 +38,7 @@ export default function AdminLogin() {
             <Heart className="w-8 h-8 text-white fill-white" />
           </div>
           <h1 className="text-2xl font-bold text-white">Admin Dashboard</h1>
-          <p className="text-white/50 text-sm mt-1">Health oK Home Care Services</p>
+          <p className="text-white/50 text-sm mt-1">PrickCare</p>
         </div>
         <form onSubmit={handleLogin} className="p-8 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 space-y-6">
           <div>

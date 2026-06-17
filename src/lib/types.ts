@@ -1,11 +1,13 @@
 export interface Service {
   id: string;
   service_name: string;
+  category: string;
   description: string | null;
   price: number | null;
-  category: string;
+  display_order: number;
   is_active: boolean;
   created_at: string;
+  updated_at: string;
 }
 
 export interface Booking {

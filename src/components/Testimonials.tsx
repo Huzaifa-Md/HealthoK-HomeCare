@@ -37,9 +37,9 @@ export default function Testimonials() {
     >
       <div className="absolute top-0 right-0 w-96 h-96 bg-secondary/5 rounded-full blur-3xl" />
 
-      <div className="max-w-7xl mx-auto relative z-10">
+      <div className="content-container relative z-10">
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
+        <div className="text-center max-w-2xl mx-auto mb-12">
           <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary/10 text-secondary-dark text-sm font-semibold mb-4">
             <MessageSquareHeart className="w-4 h-4" />
             Testimonials
@@ -47,7 +47,7 @@ export default function Testimonials() {
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-text-primary mb-6">
             What Our <span className="gradient-text">Patients Say</span>
           </h2>
-          <p className="text-text-secondary text-lg">
+          <p className="text-text-secondary text-lg font-medium">
             Real experiences from real patients who trust us with their
             healthcare needs.
           </p>
@@ -84,7 +84,7 @@ export default function Testimonials() {
               {testimonials.map((t, i) => (
                 <div
                   key={t.id}
-                  className="group relative shrink-0 w-full md:w-auto snap-center p-6 rounded-2xl bg-white border border-border hover:border-primary/20 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300 card-hover"
+                  className="group relative h-full flex flex-col justify-between shrink-0 w-full md:w-auto snap-center p-6 rounded-2xl bg-white border border-border hover:border-primary/20 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300 card-hover"
                 >
                 <Quote className="absolute top-4 right-4 w-8 h-8 text-primary/10 group-hover:text-primary/20 transition-colors" />
 

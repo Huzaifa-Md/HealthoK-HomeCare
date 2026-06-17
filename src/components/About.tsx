@@ -40,9 +40,9 @@ export default function About() {
       {/* Background decorative element */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
 
-      <div className="max-w-7xl mx-auto relative z-10">
+      <div className="content-container relative z-10">
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
+        <div className="text-center max-w-2xl mx-auto mb-12">
           <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-4">
             <Heart className="w-4 h-4" />
             About Us
@@ -51,8 +51,8 @@ export default function About() {
             Your Trusted Partner in{' '}
             <span className="gradient-text">Home Healthcare</span>
           </h2>
-          <p className="text-text-secondary text-lg leading-relaxed">
-            Health oK Home Care Services is dedicated to bringing professional
+          <p className="text-text-secondary text-lg font-medium leading-relaxed">
+            PrickCare is dedicated to bringing professional
             medical care to your doorstep. We believe that quality healthcare
             should be accessible, affordable, and comfortable.
           </p>
@@ -113,7 +113,7 @@ export default function About() {
           {/* Right - Why Choose Us */}
           <div>
             <h3 className="text-2xl font-bold text-text-primary mb-8">
-              Why Choose Health oK?
+              Why Choose PrickCare?
             </h3>
             <div className="space-y-5">
               {reasons.map((item, i) => (

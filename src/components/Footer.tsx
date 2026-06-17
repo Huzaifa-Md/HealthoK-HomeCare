@@ -3,7 +3,6 @@
 import { PhoneCall, MapPin } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
-import logoImg from '../../public/logo-1.png';
 
 interface FooterProps {
   onRequestCallback: () => void;
@@ -19,26 +18,28 @@ export default function Footer({ onRequestCallback }: FooterProps) {
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl translate-y-1/2" />
       </div>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div className="content-container section-padding relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link
               href="/"
-              className="flex items-center gap-2.5 mb-6 group inline-flex"
+              className="flex items-center gap-[12px] mb-6 group w-max max-w-full"
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             >
               <Image
-                src={logoImg}
-                alt="HealthoK Logo"
-                className="w-10 h-10 group-hover:scale-110 transition-transform brightness-0 invert object-contain"
+                src="/logo.jpg"
+                alt="PrickCare Logo"
+                width={50}
+                height={50}
+                className="w-[50px] h-[50px] block group-hover:scale-110 transition-transform object-contain shrink-0"
               />
-              <span className="text-xl font-bold text-white leading-tight tracking-tight">
-                HealthoK<span className="text-primary">@</span><br/><span className="text-sm font-medium opacity-80">HomeCare</span>
+              <span className="text-xl font-bold text-white leading-tight tracking-tight whitespace-nowrap">
+                PrickCare<span className="text-primary">@</span><span className="text-sm font-medium opacity-80">HomeCare</span>
               </span>
             </Link>
             <p className="text-white/50 text-sm leading-relaxed mb-4">
-              <span className="text-primary font-semibold">Professional Expert At Home</span> services at your doorstep. Certified professionals, fast home visits.
+              <span className="text-primary font-semibold">Professional Experts At Home</span> services at your doorstep. Certified professionals, fast home visits.
             </p>
           </div>
 
@@ -46,7 +47,7 @@ export default function Footer({ onRequestCallback }: FooterProps) {
           <div>
             <h4 className="font-semibold mb-6 text-white/90">Quick Links</h4>
             <ul className="space-y-3">
-              {['home', 'about', 'services', 'contact'].map((id) => (
+              {['home', 'services', 'about', 'contact'].map((id) => (
                 <li key={id}>
                   <button onClick={() => scrollTo(id)} className="text-white/50 hover:text-primary text-sm transition-colors capitalize">{id}</button>
                 </li>
@@ -61,7 +62,7 @@ export default function Footer({ onRequestCallback }: FooterProps) {
           <div>
             <h4 className="font-semibold mb-6 text-white/90">Top Services</h4>
             <ul className="space-y-3">
-              {['Blood Test at Home', 'IV Injection & Drip', 'Wound Dressing', 'Adult Vaccination', 'ECG at Home'].map((s) => (
+              {['Blood Test at Home', 'IV Injection & Drip', 'Wound Dressing', 'Adult Vaccination'].map((s) => (
                 <li key={s}>
                   <button onClick={() => scrollTo('services')} className="text-white/50 hover:text-primary text-sm transition-colors text-left">{s}</button>
                 </li>
@@ -94,7 +95,7 @@ export default function Footer({ onRequestCallback }: FooterProps) {
         </div>
 
         <div className="mt-16 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-white/40 text-sm">&copy; {new Date().getFullYear()} HealthoK HomeCare. All rights reserved.</p>
+          <p className="text-white/40 text-sm">&copy; {new Date().getFullYear()} PrickCare. All rights reserved.</p>
           <p className="text-white/30 text-xs">Healthcare at your doorstep</p>
         </div>
       </div>
