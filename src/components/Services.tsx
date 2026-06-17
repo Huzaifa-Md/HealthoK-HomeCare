@@ -18,39 +18,41 @@ const FIXED_CATEGORIES = [
   { id: 'lab-tests', name: 'Lab Tests', icon: TestTube }
 ];
 
+const fallbackDate = new Date().toISOString();
+
 const FALLBACK_SERVICES: Service[] = [
   // Nursing Procedures
-  { id: '1', category: 'Nursing Procedures', service_name: 'IM Injection Services at Home', description: 'Safe intramuscular injections administered by trained nurses.', is_active: true, display_order: 1 },
-  { id: '2', category: 'Nursing Procedures', service_name: 'IV Injection at Home', description: 'Intravenous medication delivery with proper monitoring.', is_active: true, display_order: 2 },
-  { id: '3', category: 'Nursing Procedures', service_name: 'Cannula Insertion at Home', description: 'Professional insertion for IV therapies or fluids.', is_active: true, display_order: 3 },
-  { id: '4', category: 'Nursing Procedures', service_name: 'Stoma Bag Change and Care', description: 'Hygienic stoma management to prevent complications.', is_active: true, display_order: 4 },
-  { id: '5', category: 'Nursing Procedures', service_name: 'Catheter Change at Home', description: 'Insertion and replacement performed with clinical care.', is_active: true, display_order: 5 },
-  { id: '6', category: 'Nursing Procedures', service_name: 'IV Drip at Home', description: 'Fluid and medication administration under supervision.', is_active: true, display_order: 6 },
-  { id: '7', category: 'Nursing Procedures', service_name: 'Dressing at Home', description: 'Wound dressing for injury, surgery, or chronic wounds.', is_active: true, display_order: 7 },
-  { id: '8', category: 'Nursing Procedures', service_name: 'Ryles Tube Insertion', description: 'Nutritional support through safe tube placement.', is_active: true, display_order: 8 },
+  { id: '1', category: 'Nursing Procedures', service_name: 'IM Injection Services at Home', description: 'Safe intramuscular injections administered by trained nurses.', price: null, is_active: true, display_order: 1, created_at: fallbackDate, updated_at: fallbackDate },
+  { id: '2', category: 'Nursing Procedures', service_name: 'IV Injection at Home', description: 'Intravenous medication delivery with proper monitoring.', price: null, is_active: true, display_order: 2, created_at: fallbackDate, updated_at: fallbackDate },
+  { id: '3', category: 'Nursing Procedures', service_name: 'Cannula Insertion at Home', description: 'Professional insertion for IV therapies or fluids.', price: null, is_active: true, display_order: 3, created_at: fallbackDate, updated_at: fallbackDate },
+  { id: '4', category: 'Nursing Procedures', service_name: 'Stoma Bag Change and Care', description: 'Hygienic stoma management to prevent complications.', price: null, is_active: true, display_order: 4, created_at: fallbackDate, updated_at: fallbackDate },
+  { id: '5', category: 'Nursing Procedures', service_name: 'Catheter Change at Home', description: 'Insertion and replacement performed with clinical care.', price: null, is_active: true, display_order: 5, created_at: fallbackDate, updated_at: fallbackDate },
+  { id: '6', category: 'Nursing Procedures', service_name: 'IV Drip at Home', description: 'Fluid and medication administration under supervision.', price: null, is_active: true, display_order: 6, created_at: fallbackDate, updated_at: fallbackDate },
+  { id: '7', category: 'Nursing Procedures', service_name: 'Dressing at Home', description: 'Wound dressing for injury, surgery, or chronic wounds.', price: null, is_active: true, display_order: 7, created_at: fallbackDate, updated_at: fallbackDate },
+  { id: '8', category: 'Nursing Procedures', service_name: 'Ryles Tube Insertion', description: 'Nutritional support through safe tube placement.', price: null, is_active: true, display_order: 8, created_at: fallbackDate, updated_at: fallbackDate },
   // Injection Services
-  { id: '9', category: 'Injection Services', service_name: 'IVF and Hormonal Injections', description: 'Administered safely as per medical prescription.', is_active: true, display_order: 1 },
-  { id: '10', category: 'Injection Services', service_name: 'IV Antibiotic Administration', description: 'Ensures accurate dosing and monitoring at home.', is_active: true, display_order: 2 },
-  { id: '11', category: 'Injection Services', service_name: 'Vitamin B12 and D3 Shots', description: 'Supports nutritional management and deficiency correction.', is_active: true, display_order: 3 },
+  { id: '9', category: 'Injection Services', service_name: 'IVF and Hormonal Injections', description: 'Administered safely as per medical prescription.', price: null, is_active: true, display_order: 1, created_at: fallbackDate, updated_at: fallbackDate },
+  { id: '10', category: 'Injection Services', service_name: 'IV Antibiotic Administration', description: 'Ensures accurate dosing and monitoring at home.', price: null, is_active: true, display_order: 2, created_at: fallbackDate, updated_at: fallbackDate },
+  { id: '11', category: 'Injection Services', service_name: 'Vitamin B12 and D3 Shots', description: 'Supports nutritional management and deficiency correction.', price: null, is_active: true, display_order: 3, created_at: fallbackDate, updated_at: fallbackDate },
   // Vaccination
-  { id: '11a', category: 'Vaccination', service_name: 'Pediatric Vaccination', description: 'Comprehensive childhood immunization services administered safely at home according to recommended vaccination schedules.', is_active: true, display_order: 1 },
-  { id: '12', category: 'Vaccination', service_name: 'Adult Vaccination', description: 'Routine and preventive vaccinations administered at home.', is_active: true, display_order: 2 },
-  { id: '13', category: 'Vaccination', service_name: 'Elderly Vaccination', description: 'Recommended vaccinations for senior citizens delivered at home.', is_active: true, display_order: 3 },
+  { id: '11a', category: 'Vaccination', service_name: 'Pediatric Vaccination', description: 'Comprehensive childhood immunization services administered safely at home according to recommended vaccination schedules.', price: null, is_active: true, display_order: 1, created_at: fallbackDate, updated_at: fallbackDate },
+  { id: '12', category: 'Vaccination', service_name: 'Adult Vaccination', description: 'Routine and preventive vaccinations administered at home.', price: null, is_active: true, display_order: 2, created_at: fallbackDate, updated_at: fallbackDate },
+  { id: '13', category: 'Vaccination', service_name: 'Elderly Vaccination', description: 'Recommended vaccinations for senior citizens delivered at home.', price: null, is_active: true, display_order: 3, created_at: fallbackDate, updated_at: fallbackDate },
   // Health Check-up Packages
-  { id: '14', category: 'Health Check-up Packages', service_name: 'General Full Body Check-up', description: 'Comprehensive health screening covering major health parameters.', is_active: true, display_order: 1 },
-  { id: '15', category: 'Health Check-up Packages', service_name: 'Full Body Check-up for Men', description: 'Health package focused on men\'s preventive healthcare needs.', is_active: true, display_order: 2 },
-  { id: '16', category: 'Health Check-up Packages', service_name: 'Full Body Check-up for Women', description: 'Comprehensive health screening tailored for women\'s healthcare.', is_active: true, display_order: 3 },
-  { id: '17', category: 'Health Check-up Packages', service_name: 'Full Body Check-up for Senior Citizens', description: 'Specialized health screening focused on age-related concerns.', is_active: true, display_order: 4 },
+  { id: '14', category: 'Health Check-up Packages', service_name: 'General Full Body Check-up', description: 'Comprehensive health screening covering major health parameters.', price: null, is_active: true, display_order: 1, created_at: fallbackDate, updated_at: fallbackDate },
+  { id: '15', category: 'Health Check-up Packages', service_name: 'Full Body Check-up for Men', description: 'Health package focused on men\'s preventive healthcare needs.', price: null, is_active: true, display_order: 2, created_at: fallbackDate, updated_at: fallbackDate },
+  { id: '16', category: 'Health Check-up Packages', service_name: 'Full Body Check-up for Women', description: 'Comprehensive health screening tailored for women\'s healthcare.', price: null, is_active: true, display_order: 3, created_at: fallbackDate, updated_at: fallbackDate },
+  { id: '17', category: 'Health Check-up Packages', service_name: 'Full Body Check-up for Senior Citizens', description: 'Specialized health screening focused on age-related concerns.', price: null, is_active: true, display_order: 4, created_at: fallbackDate, updated_at: fallbackDate },
   // Lab Tests
-  { id: '18', category: 'Lab Tests', service_name: 'Blood Test', description: 'Home blood sample collection supporting timely diagnosis and monitoring.', is_active: true, display_order: 1 },
-  { id: '19', category: 'Lab Tests', service_name: 'Lipid Profile Test', description: 'Assesses cholesterol levels and cardiovascular risk.', is_active: true, display_order: 2 },
-  { id: '20', category: 'Lab Tests', service_name: 'HbA1c Test', description: 'Used to monitor long-term blood sugar control.', is_active: true, display_order: 3 },
-  { id: '21', category: 'Lab Tests', service_name: 'CBC Test', description: 'Complete blood count analysis for overall health assessment.', is_active: true, display_order: 4 },
-  { id: '22', category: 'Lab Tests', service_name: 'Liver Function Test', description: 'Evaluates liver health and function.', is_active: true, display_order: 5 },
-  { id: '23', category: 'Lab Tests', service_name: 'Kidney Function Test', description: 'Monitors kidney health and chronic condition risks.', is_active: true, display_order: 6 },
-  { id: '24', category: 'Lab Tests', service_name: 'Vitamin D Test', description: 'Identifies vitamin D deficiency and nutritional concerns.', is_active: true, display_order: 7 },
-  { id: '25', category: 'Lab Tests', service_name: 'Urine Routine Test', description: 'Evaluates urinary and kidney health through sample analysis.', is_active: true, display_order: 8 },
-  { id: '26', category: 'Lab Tests', service_name: 'Double Marker Test', description: 'Prenatal screening test performed during pregnancy.', is_active: true, display_order: 9 },
+  { id: '18', category: 'Lab Tests', service_name: 'Blood Test', description: 'Home blood sample collection supporting timely diagnosis and monitoring.', price: null, is_active: true, display_order: 1, created_at: fallbackDate, updated_at: fallbackDate },
+  { id: '19', category: 'Lab Tests', service_name: 'Lipid Profile Test', description: 'Assesses cholesterol levels and cardiovascular risk.', price: null, is_active: true, display_order: 2, created_at: fallbackDate, updated_at: fallbackDate },
+  { id: '20', category: 'Lab Tests', service_name: 'HbA1c Test', description: 'Used to monitor long-term blood sugar control.', price: null, is_active: true, display_order: 3, created_at: fallbackDate, updated_at: fallbackDate },
+  { id: '21', category: 'Lab Tests', service_name: 'CBC Test', description: 'Complete blood count analysis for overall health assessment.', price: null, is_active: true, display_order: 4, created_at: fallbackDate, updated_at: fallbackDate },
+  { id: '22', category: 'Lab Tests', service_name: 'Liver Function Test', description: 'Evaluates liver health and function.', price: null, is_active: true, display_order: 5, created_at: fallbackDate, updated_at: fallbackDate },
+  { id: '23', category: 'Lab Tests', service_name: 'Kidney Function Test', description: 'Monitors kidney health and chronic condition risks.', price: null, is_active: true, display_order: 6, created_at: fallbackDate, updated_at: fallbackDate },
+  { id: '24', category: 'Lab Tests', service_name: 'Vitamin D Test', description: 'Identifies vitamin D deficiency and nutritional concerns.', price: null, is_active: true, display_order: 7, created_at: fallbackDate, updated_at: fallbackDate },
+  { id: '25', category: 'Lab Tests', service_name: 'Urine Routine Test', description: 'Evaluates urinary and kidney health through sample analysis.', price: null, is_active: true, display_order: 8, created_at: fallbackDate, updated_at: fallbackDate },
+  { id: '26', category: 'Lab Tests', service_name: 'Double Marker Test', description: 'Prenatal screening test performed during pregnancy.', price: null, is_active: true, display_order: 9, created_at: fallbackDate, updated_at: fallbackDate },
 ];
 
 export default function Services({ onBookService }: ServicesProps) {
