@@ -11,7 +11,7 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || 'https://patientcarehomeservices.in'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || 'https://patienthealthcare.online'),
   title: "Patient Care Home Services",
   description: "Professional home healthcare services including nursing procedures, injection services, vaccinations, health checkups, and lab tests at home.",
   keywords: "Patient Care Home Services, Home Healthcare, Nursing Services At Home, Injection Services At Home, Lab Tests At Home, Vaccination At Home, Healthcare Ghaziabad, Healthcare East Delhi",
