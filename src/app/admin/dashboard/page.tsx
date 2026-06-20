@@ -7,15 +7,16 @@ import { supabase } from '@/lib/supabase';
 import { Booking, Service } from '@/lib/types';
 import {
   Heart, LogOut, CalendarCheck, Package,
-  BarChart3, Clock, CheckCircle, Home, Menu, X, Settings
+  BarChart3, Clock, CheckCircle, Home, Menu, X, Settings, Star
 } from 'lucide-react';
 
 // Import Tabs
 import ServicesTab from '@/components/admin/ServicesTab';
 import BookingsTab from '@/components/admin/BookingsTab';
 import SettingsTab from '@/components/admin/SettingsTab';
+import ReviewsTab from '@/components/admin/ReviewsTab';
 
-type Tab = 'overview' | 'services' | 'requests' | 'settings';
+type Tab = 'overview' | 'services' | 'requests' | 'reviews' | 'settings';
 type Theme = 'theme-light' | 'theme-dark';
 
 export default function AdminDashboard() {
@@ -91,6 +92,7 @@ export default function AdminDashboard() {
     { id: 'overview', label: 'Dashboard', icon: BarChart3 },
     { id: 'services', label: 'Services', icon: Package, count: services.length || undefined },
     { id: 'requests', label: 'Callback Requests', icon: CalendarCheck, count: pendingCount || undefined },
+    { id: 'reviews', label: 'Patient Reviews', icon: Star },
     { id: 'settings', label: 'Settings', icon: Settings },
   ];
 
@@ -116,8 +118,8 @@ export default function AdminDashboard() {
       <aside className={`fixed lg:static inset-y-0 left-0 z-[1000] w-72 bg-admin-card border-r border-admin-border transform ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'} lg:translate-x-0 transition-transform duration-300 ease-in-out flex flex-col`}>
         <div className="h-16 flex items-center justify-between px-6 border-b border-admin-border shrink-0">
           <div className="flex items-center gap-3">
-            <Image src="/logo.jpg" alt="PrickCare" width={32} height={32} className="rounded-lg object-contain" />
-            <span className="font-bold text-admin-text text-lg tracking-tight">PrickCare Admin</span>
+            <Image src="/logo.jpg" alt="Patient Care Home Services" width={80} height={50} className="w-20 h-auto rounded-lg object-contain bg-white p-1" />
+            <span className="font-cormorant font-bold text-admin-text text-xl tracking-tight leading-none">Patient Care <span className="text-sm font-sans block text-admin-text-muted">Home Services Admin</span></span>
           </div>
           <button onClick={() => setIsSidebarOpen(false)} className="lg:hidden p-1 text-admin-text-muted hover:bg-admin-bg rounded-md">
             <X className="w-5 h-5" />
@@ -162,9 +164,11 @@ export default function AdminDashboard() {
             <button onClick={() => setIsSidebarOpen(true)} className="p-2 -ml-2 text-admin-text-muted hover:text-admin-text hover:bg-admin-bg rounded-lg transition-colors">
               <Menu className="w-6 h-6" />
             </button>
-            <span className="font-bold text-admin-text text-lg">PrickCare Admin</span>
+            <div className="flex items-center gap-3">
+              <span className="font-cormorant font-bold text-admin-text text-xl">Patient Care Home Services Admin</span>
+            </div>
           </div>
-          <Image src="/logo.jpg" alt="PrickCare" width={32} height={32} className="rounded-lg object-contain" />
+          <Image src="/logo.jpg" alt="Patient Care Home Services" width={80} height={50} className="w-16 h-auto rounded-lg object-contain bg-white p-1" />
         </header>
 
         {/* Content Area */}
@@ -238,9 +242,10 @@ export default function AdminDashboard() {
             </div>
           )}
 
-          {tab === 'services' && <div className="max-w-6xl mx-auto animate-fade-in"><ServicesTab /></div>}
-          {tab === 'requests' && <div className="max-w-6xl mx-auto animate-fade-in"><BookingsTab /></div>}
-          {tab === 'settings' && <div className="max-w-6xl mx-auto animate-fade-in"><SettingsTab /></div>}
+          { tab === 'services' && <div className="max-w-6xl mx-auto animate-fade-in"><ServicesTab /></div> }
+          { tab === 'requests' && <div className="max-w-6xl mx-auto animate-fade-in"><BookingsTab /></div> }
+          { tab === 'reviews' && <div className="max-w-6xl mx-auto animate-fade-in"><ReviewsTab /></div> }
+          { tab === 'settings' && <div className="max-w-6xl mx-auto animate-fade-in"><SettingsTab /></div> }
 
         </div>
       </main>

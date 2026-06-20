@@ -74,17 +74,19 @@ export default function Navbar({ onRequestCallback }: NavbarProps) {
             className="flex items-center gap-2 sm:gap-2.5 group shrink-0"
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           >
-            <Image
-              src="/logo.jpg"
-              alt="PrickCare Logo"
-              width={60}
-              height={60}
-              className="w-[40px] h-[40px] md:w-[48px] md:h-[48px] lg:w-[56px] lg:h-[56px] object-contain group-hover:scale-110 transition-transform shrink-0"
-              priority
-            />
-            <span className="text-sm sm:text-base lg:text-lg font-bold text-text-primary leading-tight tracking-tight whitespace-nowrap">
-              PrickCare<span className="text-primary">@</span>HomeCare
-            </span>
+            <div className="flex items-center gap-2 sm:gap-3">
+              <Image
+                src="/logo.jpg"
+                alt="Patient Care Home Services Logo"
+                width={180}
+                height={120}
+                className="h-10 w-auto md:h-12 lg:h-14 object-contain group-hover:scale-105 transition-transform shrink-0"
+                priority
+              />
+              <span className="font-cormorant font-bold text-xl sm:text-2xl text-text-primary tracking-tight">
+                Patient Care
+              </span>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}

@@ -52,7 +52,7 @@ export default function About() {
             <span className="gradient-text">Home Healthcare</span>
           </h2>
           <p className="text-text-secondary text-lg font-medium leading-relaxed">
-            PrickCare is dedicated to bringing professional
+            Patient Care Home Services is dedicated to bringing professional
             medical care to your doorstep. We believe that quality healthcare
             should be accessible, affordable, and comfortable.
           </p>
@@ -95,7 +95,7 @@ export default function About() {
             {/* Stats */}
             <div className="grid grid-cols-3 gap-4">
               {[
-                { value: '500+', label: 'Patients Served' },
+                { value: '1000+', label: 'Patients Served' },
                 { value: '15+', label: 'Services' },
                 { value: '4.9', label: 'Rating' },
               ].map((stat, i) => (
@@ -113,7 +113,7 @@ export default function About() {
           {/* Right - Why Choose Us */}
           <div>
             <h3 className="text-2xl font-bold text-text-primary mb-8">
-              Why Choose PrickCare?
+              Why Choose Patient Care Home Services?
             </h3>
             <div className="space-y-5">
               {reasons.map((item, i) => (

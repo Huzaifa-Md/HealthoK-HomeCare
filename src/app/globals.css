@@ -259,3 +259,9 @@ body {
     padding-bottom: 5rem;
   }
 }
+
+@layer utilities {
+  .font-cormorant {
+    font-family: var(--font-cormorant), serif;
+  }
+}

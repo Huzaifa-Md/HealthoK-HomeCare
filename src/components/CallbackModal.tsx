@@ -34,6 +34,7 @@ export default function CallbackModal({
   const [form, setForm] = useState({
     name: '',
     phone: '',
+    email: '',
     notes: '',
   });
   const [submitting, setSubmitting] = useState(false);
@@ -59,11 +60,15 @@ export default function CallbackModal({
       return;
     }
     if (!/^[6-9]\d{9}$/.test(form.phone)) {
-      toast.error('Please enter a valid 10-digit mobile number.');
+      toast.error('Please enter a valid 10-digit Indian mobile number.');
       return;
     }
     if (!form.notes.trim()) {
       toast.error('Please describe the required service.');
+      return;
+    }
+    if (form.notes.length < 10) {
+      toast.error('Notes must be at least 10 characters.');
       return;
     }
 
@@ -72,7 +77,7 @@ export default function CallbackModal({
     try {
       // Mapping the simplified form fields back to the existing DB schema requirements
       // using valid dummy defaults for removed fields to satisfy NOT NULL constraints.
-      const bookingData = {
+      const bookingData: any = {
         customer_name: form.name,
         phone: form.phone,
         address: 'Not provided',
@@ -112,6 +117,7 @@ export default function CallbackModal({
           body: JSON.stringify({
             name: form.name,
             phone: form.phone,
+            email: form.email,
             notes: form.notes,
           }),
         });
@@ -131,6 +137,7 @@ export default function CallbackModal({
       setForm({
         name: '',
         phone: '',
+        email: '',
         notes: '',
       });
       onClose();
@@ -217,6 +224,23 @@ export default function CallbackModal({
               }
               className="w-full px-4 py-2.5 rounded-xl border border-border bg-gray-50 text-text-primary text-sm focus:border-primary focus:ring-2 focus:ring-primary/10 outline-none transition-all"
               placeholder="10-digit mobile number"
+            />
+          </div>
+
+          {/* Email Address */}
+          <div>
+            <label className="flex items-center gap-1.5 text-sm font-medium text-text-primary mb-1.5">
+              <User className="w-4 h-4 text-primary" />
+              Email Address <span className="text-text-muted font-normal">(Optional)</span>
+            </label>
+            <input
+              type="email"
+              value={form.email}
+              onChange={(e) =>
+                setForm({ ...form, email: e.target.value })
+              }
+              className="w-full px-4 py-2.5 rounded-xl border border-border bg-gray-50 text-text-primary text-sm focus:border-primary focus:ring-2 focus:ring-primary/10 outline-none transition-all"
+              placeholder="For confirmation email"
             />
           </div>
 

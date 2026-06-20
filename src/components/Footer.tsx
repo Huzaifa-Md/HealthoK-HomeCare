@@ -22,24 +22,20 @@ export default function Footer({ onRequestCallback }: FooterProps) {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <Link
-              href="/"
-              className="flex items-center gap-[12px] mb-6 group w-max max-w-full"
-              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            >
+            <Link href="/" className="flex items-center gap-3 group shrink-0 mb-6" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
               <Image
                 src="/logo.jpg"
-                alt="PrickCare Logo"
+                alt="Patient Care Home Services Logo"
                 width={50}
                 height={50}
-                className="w-[50px] h-[50px] block group-hover:scale-110 transition-transform object-contain shrink-0"
+                className="w-12 h-12 object-contain bg-white rounded-lg p-1 group-hover:scale-105 transition-transform"
               />
-              <span className="text-xl font-bold text-white leading-tight tracking-tight whitespace-nowrap">
-                PrickCare<span className="text-primary">@</span><span className="text-sm font-medium opacity-80">HomeCare</span>
+              <span className="font-cormorant font-bold text-2xl text-white tracking-tight">
+                Patient Care
               </span>
             </Link>
             <p className="text-white/50 text-sm leading-relaxed mb-4">
-              <span className="text-primary font-semibold">Professional Experts At Home</span> services at your doorstep. Certified professionals, fast home visits.
+              <span className="text-primary font-semibold">Care At Home</span> services at your doorstep. Certified professionals, fast home visits.
             </p>
           </div>
 
@@ -47,7 +43,7 @@ export default function Footer({ onRequestCallback }: FooterProps) {
           <div>
             <h4 className="font-semibold mb-6 text-white/90">Quick Links</h4>
             <ul className="space-y-3">
-              {['home', 'services', 'about', 'contact'].map((id) => (
+              {['home', 'services', 'areas', 'testimonials', 'about', 'contact'].map((id) => (
                 <li key={id}>
                   <button onClick={() => scrollTo(id)} className="text-white/50 hover:text-primary text-sm transition-colors capitalize">{id}</button>
                 </li>
@@ -60,11 +56,22 @@ export default function Footer({ onRequestCallback }: FooterProps) {
 
           {/* Services */}
           <div>
-            <h4 className="font-semibold mb-6 text-white/90">Top Services</h4>
+            <h4 className="font-semibold mb-6 text-white/90">Our Services</h4>
             <ul className="space-y-3">
-              {['Blood Test at Home', 'IV Injection & Drip', 'Wound Dressing', 'Adult Vaccination'].map((s) => (
-                <li key={s}>
-                  <button onClick={() => scrollTo('services')} className="text-white/50 hover:text-primary text-sm transition-colors text-left">{s}</button>
+              {[
+                'Nursing Procedures',
+                'Injection Services',
+                'IV Drip & Fluids',
+                'Wound Care',
+                'Elderly Care',
+              ].map((service) => (
+                <li key={service}>
+                  <button onClick={() => {
+                    scrollTo('services');
+                    setTimeout(onRequestCallback, 500);
+                  }} className="text-white/50 hover:text-primary text-sm transition-colors">
+                    {service}
+                  </button>
                 </li>
               ))}
             </ul>
@@ -72,30 +79,28 @@ export default function Footer({ onRequestCallback }: FooterProps) {
 
           {/* Contact */}
           <div>
-            <h4 className="font-semibold mb-6 text-white/90">Contact & Support</h4>
-            <div className="space-y-4">
-              <p className="text-white/50 text-sm mb-4">
-                Need immediate assistance or want to book a service?
-              </p>
-              
-              <button
-                onClick={onRequestCallback}
-                className="w-full flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-sm font-semibold text-white bg-white/10 hover:bg-primary border border-white/20 hover:border-primary transition-all duration-300"
-              >
-                <PhoneCall className="w-4 h-4" />
-                Request Callback
-              </button>
-              
-              <div className="flex items-start gap-3 text-white/50 text-sm mt-6">
-                <MapPin className="w-5 h-5 shrink-0 text-primary" />
-                <span>Serving all major areas in Ghaziabad, Uttar Pradesh</span>
-              </div>
-            </div>
+            <h4 className="font-semibold mb-6 text-white/90">Contact Us</h4>
+            <ul className="space-y-4">
+              <li className="flex items-start gap-3">
+                <PhoneCall className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                <div>
+                  <p className="text-white/90 text-sm font-medium">+91 9870270197</p>
+                  <p className="text-white/50 text-xs mt-1">24/7 Available</p>
+                </div>
+              </li>
+              <li className="flex items-start gap-3">
+                <MapPin className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                <div>
+                  <p className="text-white/90 text-sm font-medium">Ghaziabad & East Delhi</p>
+                  <p className="text-white/50 text-xs mt-1">Providing services at home</p>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
 
         <div className="mt-16 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-white/40 text-sm">&copy; {new Date().getFullYear()} PrickCare. All rights reserved.</p>
+          <p className="text-white/40 text-sm">&copy; {new Date().getFullYear()} Patient Care Home Services. All rights reserved.</p>
           <p className="text-white/30 text-xs">Healthcare at your doorstep</p>
         </div>
       </div>

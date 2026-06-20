@@ -7,21 +7,39 @@ import ServiceDetailsModal from './ServiceDetailsModal';
 const areas = [
   {
     name: 'Rajendra Nagar',
-    desc: 'Complete home healthcare coverage across Rajendra Nagar and surrounding localities.',
+    desc: 'Complete home healthcare coverage across Rajendra Nagar, Ghaziabad.',
     gradient: 'from-primary to-accent',
     mapUrl: 'https://www.google.com/maps/search/?api=1&query=Rajendra+Nagar,+Ghaziabad',
   },
   {
     name: 'Raj Nagar Extension',
-    desc: 'Serving all residential societies and apartments in Raj Nagar Extension.',
+    desc: 'Serving all residential societies and apartments in Raj Nagar Extension, Ghaziabad.',
     gradient: 'from-accent to-secondary',
     mapUrl: 'https://www.google.com/maps/search/?api=1&query=Raj+Nagar+Extension,+Ghaziabad',
   },
   {
     name: 'Shalimar Garden',
-    desc: 'Full home healthcare services available throughout Shalimar Garden area.',
+    desc: 'Full home healthcare services available throughout Shalimar Garden area, Ghaziabad.',
     gradient: 'from-secondary to-primary',
     mapUrl: 'https://www.google.com/maps/search/?api=1&query=Shalimar+Garden,+Ghaziabad',
+  },
+  {
+    name: 'Dilshad Garden',
+    desc: 'Professional nursing and home care services in Dilshad Garden, East Delhi.',
+    gradient: 'from-primary to-secondary',
+    mapUrl: 'https://www.google.com/maps/search/?api=1&query=Dilshad+Garden,+East+Delhi',
+  },
+  {
+    name: 'Shahdara',
+    desc: 'Comprehensive medical care at home across Shahdara, East Delhi.',
+    gradient: 'from-secondary to-accent',
+    mapUrl: 'https://www.google.com/maps/search/?api=1&query=Shahdara,+East+Delhi',
+  },
+  {
+    name: 'Mayur Vihar',
+    desc: 'Dedicated home healthcare support for patients in Mayur Vihar, East Delhi.',
+    gradient: 'from-accent to-primary',
+    mapUrl: 'https://www.google.com/maps/search/?api=1&query=Mayur+Vihar,+East+Delhi',
   },
 ];
 
@@ -35,6 +53,7 @@ export default function Areas({ onBookService }: AreasProps) {
     description: string;
     icon: React.ElementType;
   } | null>(null);
+
   return (
     <section id="areas" className="section-padding bg-white relative overflow-hidden">
       <ServiceDetailsModal
@@ -54,17 +73,17 @@ export default function Areas({ onBookService }: AreasProps) {
             <MapPin className="w-4 h-4" />
             Service Areas
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-text-primary mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-text-primary mb-6 tracking-tight">
             Areas We <span className="gradient-text">Serve</span>
           </h2>
-          <p className="text-text-secondary text-lg">
+          <p className="text-text-secondary text-lg leading-relaxed">
             We currently provide home healthcare services in the following areas
-            of Ghaziabad, with plans to expand soon.
+            of Ghaziabad & East Delhi Region, with plans to expand soon.
           </p>
         </div>
 
         {/* Areas Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 lg:gap-8">
           {areas.map((area, i) => (
             <div
               key={i}

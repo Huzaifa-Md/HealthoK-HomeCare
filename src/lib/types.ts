@@ -33,11 +33,16 @@ export interface ContactInquiry {
   created_at: string;
 }
 
-export interface Testimonial {
+export interface Review {
   id: string;
-  customer_name: string;
-  review: string;
+  patient_name: string;
+  location: string;
+  service_received: string;
   rating: number;
-  is_approved: boolean;
+  review_message: string;
+  status: 'pending' | 'approved' | 'rejected';
+  review_type: 'real' | 'demo';
+  is_featured: boolean;
   created_at: string;
+  updated_at: string;
 }

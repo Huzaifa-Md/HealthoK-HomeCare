@@ -33,12 +33,14 @@ export default function AdminLogin() {
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-secondary/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '1.5s' }} />
       </div>
       <div className="w-full max-w-md relative z-10">
-        <div className="text-center mb-8">
-          <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-primary to-secondary mb-4">
-            <Heart className="w-8 h-8 text-white fill-white" />
+        <div className="flex flex-col items-center justify-center mb-8 animate-fade-in-up">
+          <div className="w-32 h-auto mb-4 bg-white rounded-xl shadow-lg shadow-black/5 flex items-center justify-center p-2">
+            <img src="/logo.jpg" alt="Patient Care Home Services" className="w-full h-auto object-contain" />
           </div>
-          <h1 className="text-2xl font-bold text-white">Admin Dashboard</h1>
-          <p className="text-white/50 text-sm mt-1">PrickCare</p>
+          <h1 className="text-3xl font-cormorant font-bold text-white mb-2 text-center">
+            Patient Care
+            <span className="font-sans text-xl block mt-1 text-white/80">Home Services Admin</span>
+          </h1>
         </div>
         <form onSubmit={handleLogin} className="p-8 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 space-y-6">
           <div>

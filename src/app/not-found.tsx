@@ -21,7 +21,7 @@ export default function NotFound() {
         <h2 className="text-2xl font-semibold text-gray-800 mb-4 animate-fade-in-up stagger-2">Page Not Found</h2>
         <p className="text-gray-600 mb-10 leading-relaxed animate-fade-in-up stagger-3">
           We're sorry, the page you're looking for doesn't exist or has been moved. 
-          Let's get you back to our professional home care services.
+          Let's get you back to our professional Patient Care Home Services.
         </p>
 
         <Link 
